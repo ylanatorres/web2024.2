@@ -1,0 +1,134 @@
+/* Estilos globais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Layout principal */
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Barra lateral */
+  .sidebar {
+    width: 80px;
+    background-color: #e0f2f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0;
+    gap: 24px;
+  }
+  
+  .sidebar .icon {
+    color: #0d9488;
+    cursor: pointer;
+  }
+  
+  /* Conteúdo principal */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+  }
+  
+  .main-content h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .button {
+    background-color: #0d9488;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Modal de notificações */
+  .notifications-modal {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    background-color: #1e293b;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Modal de feedback */
+  .feedback-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .feedback-modal-content {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    width: 320px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feedback-modal-content h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .feedback-modal-content p {
+    color: #374151;
+    margin-bottom: 8px;
+  }
+  
+  .stars {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .star {
+    font-size: 24px;
+    cursor: pointer;
+    color: #d1d5db;
+  }
+  
+  .star.active {
+    color: #f59e0b;
+  }
+  
+  /* Botão flutuante do chat */
+  .chat-button {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: #0d9488;
+    color: white;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
