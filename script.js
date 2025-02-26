@@ -206,7 +206,7 @@ function render() {
   root.innerHTML = `
     <div class="container ${theme === "dark" ? "dark-mode" : ""}">
       <div class="sidebar">
-        <div class="icon">🏠</div>
+        <div class="icon" onclick="toggleHome()">🏠</div>
         <div class="icon notification" onclick="toggleNotifications()">🔔</div>
         <div class="icon">⚙️</div>
         <div class="icon faq" onclick="toggleFAQModal()">❓</div>
@@ -216,7 +216,7 @@ function render() {
         <div class="buttons">
           <button class="button">Acompanhamento em tempo real</button>
           <button class="button" onclick="toggleFeedbackModal()">Feedback pós solicitação</button>
-          <button class="button" onclick="window.location.href='cadastro.html'">Cadastro</button>
+          <button class="button" onclick="renderCadastro()">Cadastro</button>
         </div>
         <div class="chat-button" onclick="toggleChatbot()">💬</div>
       </div>
@@ -259,6 +259,44 @@ function handleCadastro(event) {
     // Redireciona manualmente para a tela inicial após o cadastro
     window.location.href = 'index.html';
   }
+
+function renderCadastro(){
+  const mainContent = document.querySelector('.main-content');
+  mainContent.innerHTML = `
+  <h1>Cadastro</h1>
+    <form id="cadastro-form" onsubmit="handleCadastro(event)">
+        <div class="form-group">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required />
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" required />
+        </div>
+        <div class="form-group">
+            <label for="matricula">Matrícula:</label>
+            <input type="text" id="matricula" name="matricula" required />
+        </div>
+        <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required />
+        </div>
+        <div class="form-group">
+            <label for="confirmar-senha">Confirmar Senha:</label>
+            <input type="password" id="confirmar-senha" name="confirmar-senha" required />
+        </div>
+        <button type="submit" class="button">Cadastrar</button>
+    </form>
+  `;
+}
+
+function toggleHome() {
+  render()
+}
 
 // Inicializar
 document.addEventListener("DOMContentLoaded", function () {

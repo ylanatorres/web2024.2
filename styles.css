@@ -517,6 +517,15 @@ body {
   border-color: #0d9488;
 }
 
+#cadastro-form {
+  border: 1px solid #0d9488;   
+  border-radius: 6px;  
+  padding: 16px;           
+  padding-inline: 40px;                  
+  background-color: #fff;    
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
 /* Estilos para o botão de cadastro */
 #cadastro-form .button {
   width: 100%;
